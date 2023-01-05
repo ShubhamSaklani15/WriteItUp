@@ -1,0 +1,26 @@
+<app-header></app-header>
+<div class="container-fluid">
+    <div class="heading">New Note<hr></div>
+    <div class="form">
+        <form [formGroup]="notesForm" (ngSubmit)="onSubmit(title.value)">
+            <mat-form-field>
+                <input matInput placeholder="Note Title" formControlName="title" maxlength="150" #title required>
+                <mat-error *ngIf="!submitted && f['title'].errors?.['required']">
+                    Notes title can't be empty.</mat-error>
+                <mat-error *ngIf="submitted && f['title'].errors?.['required']">
+                    Notes title can't be empty.</mat-error>
+            </mat-form-field>
+            <mat-form-field>
+                <textarea matInput placeholder="Note Description" rows="5"
+                    formControlName="description"></textarea>
+                <mat-error *ngIf="!submitted && f['description'].errors?.['required']">
+                    Notes escription can't be empty.</mat-error>
+                <mat-error *ngIf="submitted && f['description'].errors?.['required']">
+                    Notes description can't be empty.</mat-error>
+            </mat-form-field><br><br>
+            <button type="submit" class="addButton"
+                mat-raised-button>Add</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <button mat-raised-button type="reset" class="resetButton" (click)="onReset()">Reset</button>
+        </form>
+    </div>
+</div>

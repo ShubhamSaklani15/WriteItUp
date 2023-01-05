@@ -1,0 +1,13 @@
+*{
+    justify-content: center;
+}
+p {
+    font-weight: bold;
+    font-size: large;
+}
+span, .yes {
+    color: red;
+}
+.mat-icon {
+    font-weight: bolder;
+}

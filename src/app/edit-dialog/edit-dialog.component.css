@@ -1,0 +1,27 @@
+hr {
+    color:#ffa600;
+    height: 5px;
+    background:orange;
+    padding-top: 0%;
+    margin-top: 0%;
+}
+.heading {
+    font-weight: bolder;
+    margin-top: 2%;
+    font-size: large;
+}
+.form {
+    background-color: rgb(241,241,241);
+    padding: 10px;
+}
+.mat-form-field {
+    width: 90%;
+}
+button {
+    background-color: white;
+    color: blue;
+}
+button:hover {
+    background-color: blue;
+    columns: white;
+}

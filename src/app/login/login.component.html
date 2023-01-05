@@ -1,0 +1,32 @@
+<mat-toolbar>
+    <a routerLink="/home"><span style="color:orange;"><mat-icon>note_add</mat-icon>
+            <span style="font-size:28px;">&nbsp;WriteItUp!</span></span></a>
+</mat-toolbar>
+<div class="container">
+    <mat-icon class="logo">note_alt</mat-icon>
+    <h2>WriteItUp!</h2>
+    <h3 style="color: red;" *ngIf="invalidUser">Invalid username or password!</h3>
+    <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+        <mat-form-field>
+            <mat-label>Username</mat-label>
+            <input class="input" matInput type="text" formControlName="username" placeholder="Enter username" #user>
+            <mat-error *ngIf="!submitted && f['username'].errors?.['required']">Username is required</mat-error>
+            <mat-error *ngIf="submitted && f['username'].errors?.['required']">Username is required</mat-error>
+            <mat-error *ngIf="!submitted && f['username'].errors?.['containSpace']">username can't have blank
+                spaces</mat-error>
+            <mat-error *ngIf="submitted && f['username'].errors?.['containSpace']">username can't have blank
+                spaces</mat-error>
+        </mat-form-field>
+        <br>
+        <mat-form-field>
+            <mat-label>Password</mat-label>
+            <input class="input" matInput type="password" formControlName="password" placeholder="Enter password">
+            <mat-error *ngIf="submitted && f['password'].errors?.['required']">Password is required</mat-error>
+            <mat-error *ngIf="!submitted && f['password'].errors?.['required']">Password is required</mat-error>
+        </mat-form-field>
+        <br>
+        <button type="submit" class="loginButton" mat-flat-button>Login</button>
+    </form>
+    <br><hr>
+    Don't have an account? <a [routerLink]="['/signup']">Create now</a>
+</div>

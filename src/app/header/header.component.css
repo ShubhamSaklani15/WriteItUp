@@ -1,0 +1,23 @@
+.mat-toolbar {
+    background-color: black;
+    color: white;
+    font-family: Bahnshrift SemiBold;
+}
+.mat-button {
+    color: white;
+}
+.spacer {
+    flex: 1 1 auto;
+}
+a {
+    font-family: 'Times New Roman', Times, serif;
+    text-decoration: none;
+    color: white;
+    font-size: medium;
+}
+a:hover {
+    color: blue;
+}
+.class {
+    color:blue;
+}

@@ -1,0 +1,50 @@
+<mat-toolbar>
+    <a routerLink="/home"><span style="color:orange;"><mat-icon>note_add</mat-icon>
+            <span style="font-size:28px;">&nbsp;WriteItUp!</span></span></a>
+</mat-toolbar>
+<div class="container">
+    <mat-icon class="logo">note_alt</mat-icon>
+    <h2>WriteItUp!</h2>
+    <form [formGroup]="signupForm" (ngSubmit)="onSubmit()">
+        <mat-form-field>
+            <mat-label>Name</mat-label>
+            <input class="input" matInput type="text" formControlName="name" placeholder="Enter your name">
+            <mat-error *ngIf="submitted && f['name'].errors?.['required']">Name is required</mat-error>
+            <mat-error *ngIf="!submitted && f['name'].errors?.['required']">Name is required</mat-error>
+        </mat-form-field>
+        <br>
+        <mat-form-field>
+            <mat-label>Username</mat-label>
+            <input class="input" matInput type="text" formControlName="username" placeholder="Enter username" #user>
+            <mat-error *ngIf="!submitted && f['username'].errors?.['required']">Username is required</mat-error>
+            <mat-error *ngIf="submitted && f['username'].errors?.['required']">Username is required</mat-error>
+            <mat-error *ngIf="!submitted && f['username'].errors?.['containSpace']">Username can't have blank spaces</mat-error>
+            <mat-error *ngIf="submitted && f['username'].errors?.['containSpace']">Username can't have blank spaces</mat-error>
+            <mat-error *ngIf="submitted && f['username'].errors?.['existingUser']">Username already exist</mat-error>
+            <mat-error *ngIf="!submitted && f['username'].errors?.['existingUser']">Username already exist</mat-error>
+        </mat-form-field>
+        <br>
+        <mat-form-field>
+            <mat-label>Email</mat-label>
+            <input class="input" matInput type="email" formControlName="email" placeholder="Enter email">
+            <mat-error *ngIf="submitted && f['email'].errors?.['required']">Email is required</mat-error>
+            <mat-error *ngIf="!submitted && f['email'].errors?.['required']">Email is required</mat-error>
+            <mat-error *ngIf="submitted && f['email'].errors?.['existingEmail']">Email already exist</mat-error>
+            <mat-error *ngIf="!submitted && f['email'].errors?.['existingEmail']">Email already exist</mat-error>
+            <mat-error *ngIf="!submitted && f['email'].errors?.['pattern']">Invalid email</mat-error>
+        </mat-form-field>
+        <br>
+        <mat-form-field>
+            <mat-label>Password</mat-label>
+            <input class="input" matInput type="password" formControlName="password" placeholder="Enter password">
+            <mat-error *ngIf="submitted && f['password'].errors?.['required']">Password is required</mat-error>
+            <mat-error *ngIf="!submitted && f['password'].errors?.['required']">Password is required</mat-error>
+            <mat-error *ngIf="submitted && !f['password'].errors?.['required'] && f['password'].errors?.['invalid']">Password must be atleast 8 characters</mat-error>
+            <mat-error *ngIf="!submitted && f['password'].errors?.['invalid']">Password must be atleast 8 characters</mat-error>
+        </mat-form-field>
+        <br>
+        <button type="submit" class="signupButton" mat-flat-button>Create Account</button>
+    </form>
+    <hr>
+    Have an account? <a [routerLink]="['/login']">Login</a>
+</div>

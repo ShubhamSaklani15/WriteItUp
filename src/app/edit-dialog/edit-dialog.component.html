@@ -1,0 +1,27 @@
+<div class="container-fluid">
+    <div class="heading">Edit Note
+        <hr>
+    </div>
+    <div class="form">
+        <form [formGroup]="notesForm" (ngSubmit)="onSubmit()">
+            <mat-form-field>
+                <input matInput placeholder="Note Title" formControlName="title">
+                <mat-error *ngIf="!submitted && f['title'].errors?.['required']">
+                    Notes title can't be empty.</mat-error>
+                <mat-error *ngIf="submitted && f['title'].errors?.['required']">
+                    Notes title can't be empty.</mat-error>
+            </mat-form-field>
+            <mat-form-field>
+                <textarea matInput [(ngModel)]="sendata" placeholder="Note Description" rows="8"
+                    formControlName="body"></textarea>
+                <mat-error *ngIf="!submitted && f['body'].errors?.['required']">
+                    Notes escription can't be empty.</mat-error>
+                <mat-error *ngIf="submitted && f['body'].errors?.['required']">
+                    Notes description can't be empty.</mat-error>
+            </mat-form-field><br><br>
+            <button type="submit" class="addButton"
+                mat-raised-button>Update</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <button mat-button mat-dialog-close>Close</button>
+        </form>
+    </div>
+</div>

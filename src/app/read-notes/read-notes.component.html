@@ -1,0 +1,9 @@
+<span *ngIf="text.length<=wordLimit">{{text}}</span>
+
+<span *ngIf="text.length>wordLimit && !showMore">{{text.substring(0,wordLimit)}}... 
+    <span (click)="showMore=true"><button>show more</button></span>
+</span>
+
+<span *ngIf="text.length>wordLimit && showMore">{{text}}
+    <span (click)="showMore=false"><button>show less</button></span>
+</span>

@@ -1,0 +1,8 @@
+<p>Are you sure to delete <span>{{note.title}}</span> ?</p>
+<button mat-button class="yes" (click)="sendData('yes')">
+    <mat-icon mat-dialog-close matTooltip="Yes" matTooltipPosition="right">done</mat-icon>
+</button>
+&nbsp;&nbsp;&nbsp;&nbsp;
+<button mat-button (click)="sendData('no')">
+    <mat-icon mat-dialog-close matTooltip="No" matTooltipPosition="right">highlight_off</mat-icon>
+</button>

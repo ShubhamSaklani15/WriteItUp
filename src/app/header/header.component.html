@@ -1,0 +1,10 @@
+<mat-toolbar>
+    <a routerLink="/home"><span style="color:orange;"><mat-icon>note_add</mat-icon>
+            <span style="font-size:28px;">&nbsp;WriteItUp!</span></span></a>
+    <div class="spacer"></div>
+    <a routerLink="/home" routerLinkActive="class" style="margin-left: auto;">Home</a>
+    <a routerLink="/newnote" routerLinkActive="class"  style="margin-left: 20px;" matTooltip="+ Create New Note">New Note</a>
+    <a routerLink="/profile" routerLinkActive="class"  style="margin-left: 20px;">
+        <mat-icon style="margin-top: 10px;" matTooltip="Profile">account_circle</mat-icon></a>
+    <a (click)="logOut()" style="margin-left: 20px;" matTooltip="logout">Logout</a>
+</mat-toolbar>

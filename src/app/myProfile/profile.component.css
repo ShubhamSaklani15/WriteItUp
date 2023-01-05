@@ -1,0 +1,50 @@
+.container {
+    height: 75vh;
+    margin-top: 4%;
+    padding-top: 2%;
+    font-family: Franklin Gothic Medium;
+}
+
+mat-sidenav-container {
+    height: 100%;
+}
+
+mat-sidenav-content,
+mat-sidenav {
+    padding: 20px;
+}
+
+mat-sidenav {
+    background-color: lightsteelblue;
+}
+
+.name {
+    display: flex;
+    float: left;
+}
+
+.heading {
+    margin-left: 6%;
+    font-weight: bolder;
+    font-size: large;
+    color: grey;
+    font-family: arial black;
+}
+
+.row {
+    font-family: arial black;
+}
+
+hr {
+    line-height: 5px;
+    color: red;
+}
+
+.icon {
+    color: red;
+}
+
+.button {
+    border: none;
+    background-color: lightsteelblue;
+}

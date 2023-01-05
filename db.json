@@ -1,0 +1,57 @@
+{
+  "NOTES": [
+    {
+      "title": "Note 1",
+      "description": "AngularJS is a toolset for building the framework most suited to your application development. It is fully extensible and works well with other libraries. Every feature can be modified or replaced to suit your unique development workflow and feature needs. ",
+      "username": "shubham",
+      "id": 1
+    },
+    {
+      "title": "Notes on Networking",
+      "description": " This is a detailed explanation of networking.This is a detailed explanation of networking.This is a detailed explanation of networking.This is a detailed explanation of networking.This is a detailed explanation of networking.This is a detailed explanation of networking.This is a detailed explanation of networking.This is a detailed explanation of networking.This is a detailed explanation of networking.This is a detailed explanation of networking.This is a detailed explanation of networking.This is a detailed explanation of networking.This is a detailed explanation of networking.This is a detailed explanation of networking.This is a detailed explanation of networking.This is a detailed explanation of networking.",
+      "username": "sumitsaklani001",
+      "id": 2
+    },
+    {
+      "title": "Programming",
+      "description": "The process of instructing or learning by means of an instructional program. : the process of preparing an instructional program for a device (such as a computer).Computer programming is the process of performing a particular computation (or more generally, accomplishing a specific computing result), usually by designing and building an executable computer program. ",
+      "username": "anonymous",
+      "id": 4
+    },
+    {
+      "title": "temp",
+      "description": "This is note 1. This is note 1. This is note 1. v v v vThis is note 1. This is note 1. This is note 1. This is note 1. This is note 1. This is note 1.",
+      "username": "shubham",
+      "id": 5
+    },
+    {
+      "title": "Angular ",
+      "description": "Angular is a TypeScript-based, free and open-source web application framework led by the Angular Team at Google and by a community of individuals and corporations. Angular is a complete rewrite from the same team that built AngularJS.\nAngular is a TypeScript-based, free and open-source web application framework led by the Angular Team at Google and by a community of individuals and corporations. Angular is a complete rewrite from the same team that built AngularJS.",
+      "username": "shubham",
+      "id": 6
+    }
+  ],
+  "USER": [
+    {
+      "name": "Shubham",
+      "username": "shubham",
+      "password": "11111111",
+      "email": "shubham@gmail.com",
+      "id": 1
+    },
+    {
+      "name": "Sumit",
+      "username": "sumitsaklani001",
+      "email": "sumit@gmail.com",
+      "password": "11111111",
+      "id": 2
+    },
+    {
+      "name": "Anonymous",
+      "username": "anonymous",
+      "password": "22222222",
+      "email": "anonymous@gmail.com",
+      "id": 3
+    }
+  ]
+}

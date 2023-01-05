@@ -1,0 +1,3 @@
+commands for json server
+    npm i -g json-server (root folder)
+    json-server --watch db.json (root folder)
