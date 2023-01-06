@@ -1,0 +1,13 @@
+<app-header></app-header>
+<div class="container1">
+    <h1 class="username">@{{username}}
+        &nbsp;&nbsp;&nbsp;&nbsp;
+        <button mat-raised-button><mat-icon>group_add</mat-icon>connect</button></h1><hr>
+    <div class="container2">
+        <tr *ngFor="let note of notes" style="line-height: 30px;">
+            <b>{{note.title}} </b><br>
+            <app-read-notes [text]="note.description" [wordLimit]="165"></app-read-notes>
+            <hr>
+        </tr>
+    </div>
+</div>

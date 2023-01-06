@@ -39,6 +39,7 @@ import { MatSnackBarModule} from '@angular/material/snack-bar';
 import { MatTabsModule} from '@angular/material/tabs';
 import { MatPaginatorModule} from '@angular/material/paginator';
 import { ReadNotesComponent } from './read-notes/read-notes.component';
+import { UserProfileComponent } from './user-profile/user-profile.component';
 
 //routes
 // canActivate:[AuthGuard]
@@ -56,7 +57,8 @@ import { ReadNotesComponent } from './read-notes/read-notes.component';
     NewNoteComponent,
     ProfileComponent,
     SignupComponent,
-    ReadNotesComponent
+    ReadNotesComponent,
+    UserProfileComponent
   ],
   imports: [
     BrowserModule,

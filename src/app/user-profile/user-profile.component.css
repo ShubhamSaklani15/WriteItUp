@@ -1,0 +1,20 @@
+.container1 {
+    margin:2%;
+    justify-content: center;
+}
+.container2 {
+    padding: 2%;
+    justify-content: center;
+}
+.username {
+    font-weight: bold;
+    font-size: bolder;
+}
+.connect {
+    display: flex; 
+    float: right;
+}
+button {
+    background-color: blue;
+    color:white;
+}

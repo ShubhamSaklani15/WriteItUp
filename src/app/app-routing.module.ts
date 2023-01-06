@@ -7,7 +7,7 @@ import { MyConnectsComponent } from './my-connects/my-connects.component';
 import { NewNoteComponent } from './new-note/new-note.component';
 import { ProfileComponent } from './myProfile/profile.component';
 import { SignupComponent } from './signup/signup.component';
-
+import { UserProfileComponent } from './user-profile/user-profile.component';
 const appRoutes:Routes = [
   {path:'', redirectTo:'/login', pathMatch:'full'},
   {path:'login', component:LoginComponent},
@@ -16,6 +16,7 @@ const appRoutes:Routes = [
   {path:'newnote', canActivate:[AuthGuard],component:NewNoteComponent},
   {path:'myconnects',canActivate:[AuthGuard], component:MyConnectsComponent},
   {path:'profile', canActivate:[AuthGuard],component:ProfileComponent},
+  {path:'userprofile', canActivate:[AuthGuard],component:UserProfileComponent},  
   {path:'**', redirectTo:'/login', pathMatch:'full'}
 ]
 

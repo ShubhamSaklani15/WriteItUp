@@ -2,7 +2,7 @@
   "NOTES": [
     {
       "title": "Note 1",
-      "description": "AngularJS is a toolset for building the framework most suited to your application development. It is fully extensible and works well with other libraries. Every feature can be modified or replaced to suit your unique development workflow and feature needs. ",
+      "description": "AngularJS is a toolset for building the framework most suited to your application development. It is fully extensible and works well with other libraries. Every feature can be modified or replaced to suit your unique development workflow and feature needs. \nAngular.",
       "username": "shubham",
       "id": 1
     },
@@ -33,7 +33,7 @@
   ],
   "USER": [
     {
-      "name": "Shubham",
+      "name": "Shubham Saklani",
       "username": "shubham",
       "password": "11111111",
       "email": "shubham@gmail.com",

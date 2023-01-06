@@ -15,6 +15,7 @@ export class ServiceService {
   name:string="";
   password:string="";
   email:string="";
+  userProfile:string="";
 
   constructor(private http: HttpClient) { }
 
