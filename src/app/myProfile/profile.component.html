@@ -1,4 +1,132 @@
 <app-header></app-header>
+<div class="container-fluid">
+    <div class="row mt-5">
+        <div class="header col-md-12 ml-auto mr-auto">
+            <mat-tab-group>
+                <!-- Tab 1 -->
+                <mat-tab >
+                    <ng-template matTabLabel>
+                        <span matBadge={{notes.length}} matBadgeOverlap="false">My Notes</span>
+                    </ng-template>
+                    <div class="container mt-5">
+                        <table class="table">
+                            <tbody>
+                                <tr *ngFor="let note of notes" style="line-height: 30px;">
+                                    <span style="font-size: x-large;"><b>{{note.title}} </b></span> 
+                                    <div style="display: flex; float: right;">
+                                        <button mat-button (click)="openEditDialogBox(note)">
+                                            <mat-icon style="color:red" matTooltip="Edit" matTooltipPosition="below">
+                                                edit
+                                            </mat-icon>
+                                        </button>
+                                        <button mat-button (click)="openDeleteDialogBox(note)">
+                                            <mat-icon style="color:red" matTooltip="Delete" matTooltipPosition="below">
+                                                delete
+                                            </mat-icon>
+                                        </button>
+                                    </div>
+                                    <br>
+                                    <app-read-notes [text]="note.description" [wordLimit]="130"></app-read-notes>
+                                    <hr>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </mat-tab>
+                <!-- Tab 2 -->
+                <mat-tab>
+                    <ng-template matTabLabel>
+                        <span matBadge={{myConnects.length}} matBadgeOverlap="false">My connects</span>
+                    </ng-template>
+                    <div class="container mt-5">
+
+                        <table class="table table-striped">
+                            <tbody>
+                                <tr *ngFor="let connect of myConnects; let i=index" style="line-height: 30px;">
+                                    <td style="width: 64vw; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;"><b>{{i+1}}. {{connect}}</b></td>
+                                    <td><button class="view" mat-raised-button (click)="viewNotes(connect)">View Notes</button></td>
+                                    <td><button class="remove" mat-raised-button (click)="removeConnect(connect)"><mat-icon>clear</mat-icon>Remove connect</button></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </mat-tab>
+                <!-- Tab 3 -->
+                <mat-tab label="Personal Details">
+                    <div class="container mt-5">
+                        <div class="container">
+                            <!-- <div class="row">
+                                <div class="col-lg-5 md-10" style="margin-left: 6%;">
+                                    <h1><b>Name: </b>{{user.name}}
+                                        <button mat-button (click)="editName=!editName">
+                                            <mat-icon class="icon" matTooltip="Edit name" matTooltipPosition="right">
+                                                edit
+                                            </mat-icon></button>
+                                    </h1>
+                                    <div *ngIf="editName">
+                                        <mat-form-field><input matInput type="text" placeholder="Enter new name"
+                                                #name></mat-form-field>
+                                        &nbsp;&nbsp;
+                                        <button (click)="saveName(name.value)" class="btn btn-success">save</button>
+                                    </div>
+                                </div>
+                                <div class="col-lg-5 md-10" style="margin-left: 6%;">
+                                    <h1><b>Password: </b>{{user.password}}
+                                        <button mat-button (click)="editPassword=!editPassword">
+                                            <mat-icon class="icon" matTooltip="Edit password"
+                                                matTooltipPosition="right">
+                                                edit
+                                            </mat-icon></button>
+                                    </h1>
+                                    <div *ngIf="editPassword">
+                                        <mat-form-field><input matInput type="password" placeholder="Enter new password"
+                                                #pass></mat-form-field>
+                                        &nbsp;&nbsp;
+                                        <button (click)="savePassword(pass.value)" class="btn btn-success">save</button>
+                                    </div>
+                                </div>
+                            </div> -->
+
+
+                            <td class="firstCol">Name:<td style="width: 70vw;">{{user.name}}</td><td>
+                            <button (click)="editName=!editName" class="view" mat-raised-button >Edit</button></td>
+                            <div *ngIf="editName">
+                                <mat-form-field><input matInput type="text" placeholder="Enter new name"
+                                        #name></mat-form-field>
+                                &nbsp;&nbsp;
+                                <button (click)="saveName(name.value)" class="btn btn-success">save</button>
+                            </div>
+                            <hr>
+                            <td class="firstCol">Password:</td> <td style="width: 70vw;">{{user.password}}</td><td>
+                            <button (click)="editPassword=!editPassword" class="view" mat-raised-button >Edit</button></td>
+                            <div *ngIf="editPassword">
+                                <mat-form-field><input matInput type="password" placeholder="Enter new password"
+                                        #pass></mat-form-field>
+                                &nbsp;&nbsp;
+                                <button (click)="savePassword(pass.value)" class="btn btn-success">save</button>
+                            </div>
+                            <hr>
+                            <td class="firstCol">Username:</td> <td style="width: 60vw;">{{user.username}}</td><hr>
+                            <td class="firstCol">Email:</td> <td style="width: 60vw;">{{user.email}}</td><hr>
+                            <td class="firstCol">Connections:</td> <td style="width: 60vw;">{{myConnects.length}}</td>
+
+                            <!-- <div class="row">
+                                <div class="col-lg-5 md-10" style="margin-left: 6%;">
+                                    <h1><b>Username: </b>{{user.username}}</h1>
+                                </div>
+                                <div class="col-lg-5 md-10" style="margin-left: 6%;">
+                                    <h1><b>Email: </b>{{user.email}}</h1>
+                                </div>
+                            </div> -->
+                        </div>
+                    </div>
+                </mat-tab>
+            </mat-tab-group>
+        </div>
+    </div>
+</div>
+
+<!-- <app-header></app-header>
 <mat-sidenav-container>
     <mat-sidenav #sidenav mode="side" opened="true">
         <mat-nav-list>
@@ -83,4 +211,4 @@
             </table>
         </div>
     </mat-sidenav-content>
-</mat-sidenav-container>
+</mat-sidenav-container> -->

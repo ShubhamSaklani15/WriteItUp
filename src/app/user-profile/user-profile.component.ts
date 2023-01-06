@@ -24,6 +24,7 @@ export class UserProfileComponent implements OnInit {
     this.getAllUsers();
     this.isConnected = false;
     this.service.getUser(this.service.userId).subscribe((data) => {
+      this.connections = data.connections;
       for (var i = 0; i < data.connections.length; i++) {
         if (data.connections[i] == this.username) this.isConnected = true;
       }
@@ -59,7 +60,6 @@ export class UserProfileComponent implements OnInit {
     if (index != -1) {
       this.connections.splice(index, 1);
     }
-
     var obj = {
       "connections": this.connections
     }

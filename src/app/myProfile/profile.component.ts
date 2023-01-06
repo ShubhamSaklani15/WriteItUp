@@ -6,6 +6,7 @@ import { ServiceService } from '../services/service.service';
 import { DeleteDialogComponent } from '../delete-dialog/delete-dialog.component';
 import { MatDialog, MatDialogConfig } from '@angular/material/dialog';
 import { EditDialogComponent } from '../edit-dialog/edit-dialog.component';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-profile',
@@ -21,8 +22,10 @@ export class ProfileComponent implements OnInit {
   page:string="profile";
   editName:boolean=false;
   editPassword:boolean=false;
+  myConnects!:String[];
 
-  constructor(private service:ServiceService, private snack:MatSnackBar, private dialog:MatDialog) { }
+  constructor(private service:ServiceService, private snack:MatSnackBar, private dialog:MatDialog,
+    private router: Router) { }
 
   ngOnInit(): void {
     this.id = this.service.userId;
@@ -31,6 +34,7 @@ export class ProfileComponent implements OnInit {
     });
     this.getMyNotes();
     this.getAllNotes();
+    this.getConnects();
   }
 
   getMyNotes() {
@@ -45,6 +49,12 @@ export class ProfileComponent implements OnInit {
     })
   }
 
+  getConnects() {
+    this.service.getUser(this.service.userId).subscribe((data) => {
+      this.myConnects = data.connections;
+    });
+  }
+
   savePassword(password:string) {
     if(password.length<8) {
       this.snack.open('Password must be atleast 8 characters',"Ok",{
@@ -52,13 +62,10 @@ export class ProfileComponent implements OnInit {
       });
     }else  {
       var userObj = {
-        "name":this.user.name,
-        "username":this.user.username,
-        "password":password,
-        "email":this.user.email
+        "password":password
       }
       this.user.password = password;
-      this.service.updateUser(userObj,this.id).subscribe((data)=>{});
+      this.service.updateuser(userObj,this.id).subscribe((data)=>{});
       this.snack.open('Password updated.',"Ok",{
         duration:2000,
       });
@@ -73,12 +80,9 @@ export class ProfileComponent implements OnInit {
     }else  {
       this.user.name=name;
       var userObj = {
-        "name":name,
-        "username":this.user.username,
-        "password":this.user.password,
-        "email":this.user.email
+        "name":name
       }
-      this.service.updateUser(userObj,this.id).subscribe((data)=>{});
+      this.service.updateuser(userObj,this.id).subscribe((data)=>{});
       this.snack.open('Name updated.',"Ok",{
         duration:2000,
       });
@@ -140,4 +144,24 @@ export class ProfileComponent implements OnInit {
     this.ngOnInit();
   }
 
+  //view notes
+  viewNotes(username:any) {
+    this.service.userProfile=username;
+    this.router.navigate(['/','userprofile'])
+  }
+  //remove connections
+  removeConnect(username:any) {
+    let index: number = this.myConnects.findIndex(conn => conn === username);
+    if (index != -1) {
+      this.myConnects.splice(index, 1);
+    }
+    var obj = {
+      "connections": this.myConnects
+    }
+    this.service.updateConnection(obj, this.service.userId).subscribe((data) => { });
+    this.snack.open('Connection removed.', "Ok", {
+      duration: 2000
+    });
+    this.ngOnInit();
+  }
 }

@@ -14,7 +14,9 @@ import { MyNotesComponent } from './my-notes/my-notes.component';
 import { NewNoteComponent } from './new-note/new-note.component';
 import { ProfileComponent } from './myProfile/profile.component';
 import { SignupComponent } from './signup/signup.component';
-import { AuthGuard } from './guard/auth.guard';
+import { ReadNotesComponent } from './read-notes/read-notes.component';
+import { UserProfileComponent } from './user-profile/user-profile.component';
+
 
 import { RouterModule, Routes } from '@angular/router';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
@@ -38,8 +40,7 @@ import { MatDialogModule} from '@angular/material/dialog';
 import { MatSnackBarModule} from '@angular/material/snack-bar';
 import { MatTabsModule} from '@angular/material/tabs';
 import { MatPaginatorModule} from '@angular/material/paginator';
-import { ReadNotesComponent } from './read-notes/read-notes.component';
-import { UserProfileComponent } from './user-profile/user-profile.component';
+import { MatBadgeModule } from '@angular/material/badge';
 
 //routes
 // canActivate:[AuthGuard]
@@ -70,6 +71,7 @@ import { UserProfileComponent } from './user-profile/user-profile.component';
     FormsModule,
     MatIconModule,
     MatTableModule,
+    MatBadgeModule,
     MatInputModule,
     MatFormFieldModule,
     MatSelectModule,
