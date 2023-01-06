@@ -43,7 +43,14 @@ export class SignupComponent implements OnInit {
     this.submitted = true;
     if (this.signupForm.invalid) return;
     this.loadSnackBar();
-    this.service.addUser(this.signupForm.value).subscribe((data) => { });
+    var obj = {
+      "name":this.signupForm.value.name,
+      "username":this.signupForm.value.username,
+      "email":this.signupForm.value.email,
+      "password":this.signupForm.value.password,
+      "connections":[]
+    }
+    this.service.addUser(obj).subscribe((data) => { });
   }
 
   onReset(): void {

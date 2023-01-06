@@ -63,6 +63,14 @@
       "email": "anonymous@gmail.com",
       "id": 3,
       "connections": []
+    },
+    {
+      "name": "xyz",
+      "username": "xyz",
+      "email": "xyz@gmail.com",
+      "password": "11111111",
+      "connections": [],
+      "id": 4
     }
   ]
 }
