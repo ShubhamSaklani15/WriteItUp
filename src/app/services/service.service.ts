@@ -16,6 +16,7 @@ export class ServiceService {
   password:string="";
   email:string="";
   userProfile:string="";
+  userProfileId!:number;
 
   constructor(private http: HttpClient) { }
 
@@ -52,5 +53,9 @@ export class ServiceService {
   }
   updateUser(user:any,id:number) {
     return this.http.put("http://localhost:3000/USER/"+id,user);
+  }
+  //update connection
+  updateConnection(user:any,id:number){
+    return this.http.patch("http://localhost:3000/USER/"+id,user);
   }
 }

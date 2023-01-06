@@ -37,14 +37,16 @@
       "username": "shubham",
       "password": "11111111",
       "email": "shubham@gmail.com",
-      "id": 1
+      "id": 1,
+      "connections": []
     },
     {
       "name": "Sumit",
       "username": "sumitsaklani001",
       "email": "sumit@gmail.com",
       "password": "11111111",
-      "id": 2
+      "id": 2,
+      "connections": []
     },
     {
       "name": "Anonymous",

@@ -3,5 +3,6 @@ export interface USERS {
     username:String,
     email:String,
     password:String,
-    id:number
+    id:number,
+    connections:String[]
 }
