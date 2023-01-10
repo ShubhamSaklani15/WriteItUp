@@ -9,7 +9,7 @@
                         <table class="table">
                             <tbody>
                                 <tr *ngFor="let note of notes" style="line-height: 30px;">
-                                    <b>{{note.title}} </b><span><button [ngClass]="{'user' : note.username==user}" (click)="openProfile(note.username)">@{{note.username}}</button></span><br>
+                                    <b>{{note.title}} </b><span><button [ngClass]="{'user' : note.username==user}" (click)="openProfile(note.username,note.userId)">@{{note.username}}</button></span><br>
                                     <app-read-notes [text]="note.description" [wordLimit]="145"></app-read-notes>
                                     <hr>
                                 </tr>

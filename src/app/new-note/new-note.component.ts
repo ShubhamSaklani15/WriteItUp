@@ -60,7 +60,8 @@ export class NewNoteComponent implements OnInit {
       var obj = {
         "title": title,
         "description":this.notesForm.value.description,
-        "username":this.service.username
+        "username":this.service.username,
+        "userId":this.service.userId
       }
       this.service.addJsonNote(obj).subscribe((data)=>{});
       this.loadSnackBar();

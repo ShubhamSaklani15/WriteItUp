@@ -29,7 +29,8 @@ export class HomeComponent implements OnInit {
     })
   }
   
-  openProfile(username:string) {
+  openProfile(username:string,id:number) {
+    this.service.userProfileId=id;
     this.service.userProfile=username;
     if(username == this.service.username) this.router.navigate(['/','profile']);
     else this.router.navigate(['/','userprofile']);

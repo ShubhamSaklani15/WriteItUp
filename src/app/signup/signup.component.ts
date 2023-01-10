@@ -48,7 +48,9 @@ export class SignupComponent implements OnInit {
       "username":this.signupForm.value.username,
       "email":this.signupForm.value.email,
       "password":this.signupForm.value.password,
-      "connections":[]
+      "connections":[],
+      "sent":[],
+      "recieved":[]
     }
     this.service.addUser(obj).subscribe((data) => { });
   }

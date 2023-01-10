@@ -1,40 +1,39 @@
 {
   "NOTES": [
     {
-      "title": "Note 1",
-      "description": "AngularJS is a toolset for building the framework most suited to your application development. It is fully extensible and works well with other libraries. Every feature can be modified or replaced to suit your unique development workflow and feature needs. \nAngular.",
-      "username": "shubham",
+      "title": "Sumit Note 1",
+      "description": "My name is sumit saklani. My name is sumit saklani. My name is sumit saklani. My name is sumit saklani. My name is sumit saklani. My name is sumit saklani. My name is sumit saklani. My name is sumit saklani. My name is sumit saklani. My name is sumit saklani. My name is sumit saklani. My name is sumit saklani. My name is sumit saklani. My name is sumit saklani. ",
+      "username": "sumitsaklani001",
+      "userId": 2,
       "id": 1
     },
     {
-      "title": "Notes on Networking",
-      "description": " This is a detailed explanation of networking.This is a detailed explanation of networking.This is a detailed explanation of networking.This is a detailed explanation of networking.This is a detailed explanation of networking.This is a detailed explanation of networking.This is a detailed explanation of networking.This is a detailed explanation of networking.This is a detailed explanation of networking.This is a detailed explanation of networking.This is a detailed explanation of networking.This is a detailed explanation of networking.This is a detailed explanation of networking.This is a detailed explanation of networking.This is a detailed explanation of networking.This is a detailed explanation of networking.",
-      "username": "sumitsaklani001",
+      "title": "Shubham Note 1",
+      "description": "My name is shubham saklani. My name is shubham saklani. My name is shubham saklani. My name is shubham saklani. My name is shubham saklani. My name is shubham saklani. My name is shubham saklani. My name is shubham saklani. My name is shubham saklani. My name is shubham saklani. My name is shubham saklani. My name is shubham saklani. My name is shubham saklani. My name is shubham saklani. ",
+      "username": "shubham",
+      "userId": 1,
       "id": 2
     },
     {
-      "title": "Programming",
-      "description": "The process of instructing or learning by means of an instructional program. : the process of preparing an instructional program for a device (such as a computer).Computer programming is the process of performing a particular computation (or more generally, accomplishing a specific computing result), usually by designing and building an executable computer program. ",
-      "username": "anonymous",
+      "title": "xyz note 1",
+      "description": "This is new note of xyz . This is new note of xyz . This is new note of xyz . This is new note of xyz . This is new note of xyz . This is new note of xyz . This is new note of xyz . This is new note of xyz . This is new note of xyz . This is new note of xyz . This is new note of xyz . This is new note of xyz . This is new note of xyz . This is new note of xyz . This is new note of xyz . ",
+      "username": "xyz",
+      "userId": 4,
+      "id": 3
+    },
+    {
+      "title": "xyz note 2",
+      "description": "This is new note of xyz . This is new note of xyz . This is new note of xyz . This is new note of xyz . This is new note of xyz . This is new note of xyz . This is new note of xyz . This is new note of xyz . This is new note of xyz . This is new note of xyz . This is new note of xyz . This is new note of xyz . This is new note of xyz . This is new note of xyz . This is new note of xyz . ",
+      "username": "xyz",
+      "userId": 4,
       "id": 4
     },
     {
-      "title": "temp",
-      "description": "This is note 1. This is note 1. This is note 1. v v v vThis is note 1. This is note 1. This is note 1. This is note 1. This is note 1. This is note 1.",
-      "username": "shubham",
+      "title": "NOTE",
+      "description": "This is anonymous note. This is anonymous note. This is anonymous note. This is anonymous note. This is anonymous note. This is anonymous note. This is anonymous note. ",
+      "username": "anonymous",
+      "userId": 3,
       "id": 5
-    },
-    {
-      "title": "Angular ",
-      "description": "Angular is a TypeScript-based, free and open-source web application framework led by the Angular Team at Google and by a community of individuals and corporations. Angular is a complete rewrite from the same team that built AngularJS.\nAngular is a TypeScript-based, free and open-source web application framework led by the Angular Team at Google and by a community of individuals and corporations. Angular is a complete rewrite from the same team that built AngularJS. Angular",
-      "username": "shubham",
-      "id": 6
-    },
-    {
-      "title": "New Notes",
-      "description": "This is new note",
-      "username": "shubham",
-      "id": 7
     }
   ],
   "USER": [
@@ -45,8 +44,10 @@
       "email": "shubham@gmail.com",
       "id": 1,
       "connections": [
-        "sumitsaklani001"
-      ]
+        "xyz"
+      ],
+      "sent": [],
+      "recieved": []
     },
     {
       "name": "Sumit",
@@ -54,7 +55,11 @@
       "email": "sumit@gmail.com",
       "password": "11111111",
       "id": 2,
-      "connections": []
+      "connections": [
+        "xyz"
+      ],
+      "sent": [],
+      "recieved": []
     },
     {
       "name": "Anonymous",
@@ -62,15 +67,22 @@
       "password": "11111111",
       "email": "anonymous@gmail.com",
       "id": 3,
-      "connections": []
+      "connections": [],
+      "sent": [],
+      "recieved": []
     },
     {
       "name": "xyz",
       "username": "xyz",
       "email": "xyz@gmail.com",
       "password": "11111111",
-      "connections": [],
-      "id": 4
+      "connections": [
+        "sumitsaklani001",
+        "shubham"
+      ],
+      "id": 4,
+      "sent": [],
+      "recieved": []
     }
   ]
 }

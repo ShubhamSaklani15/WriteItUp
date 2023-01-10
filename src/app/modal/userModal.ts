@@ -4,5 +4,7 @@ export interface USERS {
     email:String,
     password:String,
     id:number,
-    connections:String[]
+    connections:String[],
+    sent:String[],
+    recieved:String[]
 }

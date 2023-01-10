@@ -2,8 +2,10 @@
 <div class="container1">
     <h1 class="username">@{{username}}
         &nbsp;&nbsp;&nbsp;&nbsp;
-        <button class="add" *ngIf="!isConnected" mat-raised-button (click)="addConnect()"><mat-icon>group_add</mat-icon>connect</button>
-        <button class="remove" *ngIf="isConnected" mat-raised-button (click)="removeConnect()"><mat-icon>clear</mat-icon>Remove Connection</button>
+        <button class="add" *ngIf="isConnected==0" mat-raised-button (click)="addConnect()"><mat-icon>group_add</mat-icon>connect</button>
+        <button class="remove" *ngIf="isConnected==1" mat-raised-button (click)="removeConnect()"><mat-icon>clear</mat-icon>Request Sent</button>
+        <button class="remove" *ngIf="isConnected==2" mat-raised-button (click)="removeConnect()"><mat-icon>clear</mat-icon>Remove Connection</button>
+        <button class="remove" *ngIf="isConnected==3" mat-raised-button (click)="acceptReq()"><mat-icon>done</mat-icon>Accept</button>
     </h1>
     <hr>
     <div class="container2">

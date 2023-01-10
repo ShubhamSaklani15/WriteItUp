@@ -2,5 +2,6 @@ export interface NOTES {
     title:string,
     description:string,
     username:string,
-    id:number
+    id:number,
+    userId:number
 }
