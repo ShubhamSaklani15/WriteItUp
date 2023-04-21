@@ -80,6 +80,7 @@ export class ProfileComponent implements OnInit {
       this.snack.open('Password updated.', "Ok", {
         duration: 2000,
       });
+      this.editPassword=false;
     }
   }
 
@@ -97,6 +98,7 @@ export class ProfileComponent implements OnInit {
       this.snack.open('Name updated.', "Ok", {
         duration: 2000,
       });
+      this.editName=false;
     }
   }
 
